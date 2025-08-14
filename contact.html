@@ -520,7 +520,7 @@
               body: new URLSearchParams(formData).toString(),
             });
 
-            if (response.ok) {
+            if (response.ok || response.status === 200 || response.status === 302) {
               // Show success message
               submitBtn.textContent = "Successfully Joined!";
               submitBtn.style.background =
