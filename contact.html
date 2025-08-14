@@ -425,7 +425,7 @@
     <section id="contact" class="contact-form-section">
       <div class="container">
         <div class="contact-form-container">
-          <form class="contact-form" id="waitlist-form">
+          <form class="contact-form" id="waitlist-form" netlify name="waitlist">
             <div class="form-group">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required />
@@ -482,6 +482,18 @@
       </div>
     </section>
 
+    <!-- Hidden form for Netlify build-time detection -->
+    <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <select name="employees">
+        <option value="1-10">1-10 employees</option>
+      </select>
+      <input type="text" name="current_erp" />
+      <textarea name="message"></textarea>
+    </form>
+
     <footer>
       <div class="container">
         <p>&copy; 2025 PAX ERP. Built by manufacturers, for manufacturers.</p>
@@ -500,41 +512,31 @@
           submitBtn.disabled = true;
 
           const formData = new FormData(this);
-          const data = Object.fromEntries(formData);
-
-          // Create email content
-          const emailContent = `
-          New PAX ERP Waitlist Signup:
-          
-          Name: ${data.name}
-          Email: ${data.email}
-          Company: ${data.company || "Not provided"}
-          Employees: ${data.employees || "Not provided"}
-          Current ERP: ${data.current_erp || "Not provided"}
-          Challenges: ${data.message || "Not provided"}
-        `;
 
           try {
-            // Here you would integrate with Resend.com API
-            // For now, we'll show a success message
-            console.log("Form data:", data);
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            });
 
-            // Simulate API call
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-
-            // Show success message
-            submitBtn.textContent = "Successfully Joined!";
-            submitBtn.style.background =
-              "linear-gradient(135deg, #10b981 0%, #059669 100%)";
-
-            // Reset form after delay
-            setTimeout(() => {
-              this.reset();
-              submitBtn.textContent = originalText;
+            if (response.ok) {
+              // Show success message
+              submitBtn.textContent = "Successfully Joined!";
               submitBtn.style.background =
-                "linear-gradient(135deg, #ffaa49 0%, #ff8c42 100%)";
-              submitBtn.disabled = false;
-            }, 3000);
+                "linear-gradient(135deg, #10b981 0%, #059669 100%)";
+
+              // Reset form after delay
+              setTimeout(() => {
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.style.background =
+                  "linear-gradient(135deg, #ffaa49 0%, #ff8c42 100%)";
+                submitBtn.disabled = false;
+              }, 3000);
+            } else {
+              throw new Error("Form submission failed");
+            }
           } catch (error) {
             console.error("Error:", error);
             submitBtn.textContent = "Error - Please try again";
