@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>
+      PAX ERP - ERP CRM Software for Small Manufacturing Companies | Cloud-Based
+    </title>
+    <meta
+      name="description"
+      content="Modern ERP CRM system built specifically for small manufacturing companies. Get shop floor tools, inventory management, and customer management at 90% less cost than legacy systems."
+    />
+    <meta
+      name="keywords"
+      content="ERP for small manufacturing, ERP CRM for manufacturers, manufacturing ERP software, cloud ERP system, small manufacturer software"
+    />
+    <meta name="author" content="PAX ERP" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://paxerp.com" />
+
+    <!-- Open Graph meta tags -->
+    <meta
+      property="og:title"
+      content="PAX ERP - ERP CRM Software for Small Manufacturing Companies"
+    />
+    <meta
+      property="og:description"
+      content="Modern ERP CRM system built specifically for small manufacturing companies. Get shop floor tools, inventory management, and customer management at 90% less cost than legacy systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paxerp.com" />
+    <meta property="og:site_name" content="PAX ERP" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="PAX ERP - ERP CRM Software for Small Manufacturing Companies"
+    />
+    <meta
+      name="twitter:description"
+      content="Modern ERP CRM system built specifically for small manufacturing companies. Get shop floor tools, inventory management, and customer management at 90% less cost than legacy systems."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #012851 70%,
+          #000000 100%
+        );
+        color: #ffffff;
+        line-height: 1.6;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      html {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Header */
+      header {
+        padding: 25px 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid rgba(245, 150, 58, 0.2);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: #ffaa49;
+        text-shadow: 0 0 20px rgba(245, 150, 58, 0.3);
+        letter-spacing: -0.02em;
+      }
+
+      .cta-header {
+        background: linear-gradient(135deg, #ffaa49 0%, #ff8c42 100%);
+        padding: 14px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 120px 0;
+        text-align: center;
+        position: relative;
+        background: radial-gradient(
+            circle at 30% 20%,
+            rgba(245, 150, 58, 0.15) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 70% 80%,
+            rgba(1, 40, 81, 0.3) 0%,
+            transparent 50%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(1, 40, 81, 0.2) 100%
+          );
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffaa49" fill-opacity="0.03"><circle cx="30" cy="30" r="1"/></g></svg>');
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: grid-move 20s linear infinite;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      @keyframes grid-move {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(50px, 50px);
+        }
+      }
+
+      .hero-beams {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      .beam {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: beam-sweep 8s linear infinite;
+      }
+
+      .beam:nth-child(1) {
+        left: 20%;
+        animation-delay: 0s;
+      }
+
+      .beam:nth-child(2) {
+        left: 50%;
+        animation-delay: 2s;
+      }
+
+      .beam:nth-child(3) {
+        left: 80%;
+        animation-delay: 4s;
+      }
+
+      @keyframes beam-sweep {
+        0% {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+      }
+
+      .data-nodes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      .node {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+
+      .node:nth-child(1) {
+        top: 25%;
+        left: 15%;
+        animation: pulse-node 3s ease-in-out infinite;
+      }
+
+      .node:nth-child(2) {
+        top: 40%;
+        right: 20%;
+        animation: pulse-node 3s ease-in-out infinite 1s;
+      }
+
+      .node:nth-child(3) {
+        bottom: 30%;
+        left: 30%;
+        animation: pulse-node 3s ease-in-out infinite 2s;
+      }
+
+      .node:nth-child(4) {
+        bottom: 25%;
+        right: 35%;
+        animation: pulse-node 3s ease-in-out infinite 0.5s;
+      }
+
+      @keyframes pulse-node {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.5);
+          opacity: 1;
+        }
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: 900;
+        background: linear-gradient(135deg, #ffffff 30%, #ffaa49 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        position: relative;
+        z-index: 10;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        margin-bottom: 50px;
+        opacity: 0.85;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+        position: relative;
+        z-index: 10;
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        gap: 0;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #ffaa49 0%, #ff8c42 100%);
+        padding: 18px 40px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 800;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 8px 32px rgba(245, 150, 58, 0.3);
+      }
+
+      /* Features Section */
+      .features {
+        padding: 120px 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(1, 40, 81, 0.4) 50%,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 80px;
+        color: #ffaa49;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(1, 40, 81, 0.2) 100%
+        );
+        padding: 50px;
+        border-radius: 8px;
+        border: 1px solid rgba(245, 150, 58, 0.1);
+        position: relative;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #ffaa49, #ff8c42);
+        border-radius: 8px 8px 0 0;
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+      }
+
+      .feature-icon svg {
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+      }
+
+      .feature-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .feature-card p {
+        font-size: 1rem;
+        opacity: 0.8;
+        line-height: 1.6;
+      }
+
+      /* Benefits Section */
+      .benefits {
+        padding: 120px 0;
+        background: rgba(0, 0, 0, 0.95);
+      }
+
+      .benefits-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .benefits-text h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        color: #ffaa49;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+
+      .benefits-text p {
+        margin-bottom: 30px;
+      }
+
+      .benefits-list {
+        list-style: none;
+      }
+
+      .benefits-list li {
+        margin-bottom: 20px;
+        padding-left: 35px;
+        position: relative;
+        font-size: 1.1rem;
+      }
+
+      .benefits-list li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        background: #ffaa49;
+        border-radius: 2px;
+        box-shadow: 0 0 10px rgba(245, 150, 58, 0.3);
+      }
+
+      .benefits-list li:after {
+        content: "✓";
+        position: absolute;
+        left: 5px;
+        top: 6px;
+        color: #000000;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      .benefits-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .stat-card {
+        background: linear-gradient(
+          135deg,
+          rgba(245, 150, 58, 0.1) 0%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+        padding: 40px;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid rgba(245, 150, 58, 0.2);
+        position: relative;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: #ffaa49;
+        display: block;
+        text-shadow: 0 0 20px rgba(245, 150, 58, 0.3);
+      }
+
+      .stat-card span:last-child {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Target Audience */
+      .target {
+        padding: 120px 0;
+        background: linear-gradient(
+          135deg,
+          rgba(1, 40, 81, 0.3) 0%,
+          rgba(0, 0, 0, 0.95) 100%
+        );
+      }
+
+      .target-content {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .target h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        color: #ffaa49;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+
+      .target-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 80px;
+      }
+
+      .target-item {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(1, 40, 81, 0.2) 100%
+        );
+        padding: 40px;
+        border-radius: 8px;
+        border: 1px solid rgba(245, 150, 58, 0.1);
+      }
+
+      .target-item h3 {
+        color: #ffaa49;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+
+      /* CTA Section */
+      .final-cta {
+        padding: 120px 0;
+        text-align: center;
+        position: relative;
+        background: radial-gradient(
+            circle at 30% 20%,
+            rgba(245, 150, 58, 0.15) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 70% 80%,
+            rgba(1, 40, 81, 0.3) 0%,
+            transparent 50%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(1, 40, 81, 0.2) 100%
+          );
+      }
+
+      .final-cta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffaa49" fill-opacity="0.03"><circle cx="30" cy="30" r="1"/></g></svg>');
+        pointer-events: none;
+      }
+
+      .final-cta h2 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: 900;
+        background: linear-gradient(135deg, #ffffff 30%, #ffaa49 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        position: relative;
+      }
+
+      .final-cta p {
+        font-size: 1.4rem;
+        margin-bottom: 50px;
+        opacity: 0.85;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+        color: #ffffff;
+        position: relative;
+      }
+
+      .final-cta .btn-secondary {
+        background: linear-gradient(135deg, #ffaa49 0%, #ff8c42 100%);
+        padding: 18px 40px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 800;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 8px 32px rgba(245, 150, 58, 0.3);
+        position: relative;
+      }
+
+      /* Footer */
+      footer {
+        padding: 50px 0;
+        background: #000000;
+        text-align: center;
+        border-top: 1px solid rgba(245, 150, 58, 0.2);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        * {
+          box-sizing: border-box;
+        }
+
+        body,
+        html {
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        .container {
+          padding: 0 15px;
+          max-width: 100%;
+          width: 100%;
+        }
+
+        header {
+          position: static;
+          padding: 20px 0;
+        }
+
+        .header-content {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+
+        .logo {
+          font-size: 2.2rem;
+        }
+
+        .cta-header {
+          padding: 12px 24px;
+          font-size: 0.9rem;
+        }
+
+        .hero {
+          padding: 80px 0;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+          margin-bottom: 25px;
+          line-height: 1.2;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+          margin-bottom: 40px;
+          padding: 0 10px;
+        }
+
+        .btn-primary {
+          padding: 16px 32px;
+          font-size: 1rem;
+        }
+
+        .features {
+          padding: 80px 0;
+        }
+
+        .section-title {
+          font-size: 2.2rem;
+          margin-bottom: 60px;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .feature-card {
+          padding: 40px 30px;
+        }
+
+        .feature-card h3 {
+          font-size: 1.4rem;
+        }
+
+        .benefits {
+          padding: 80px 0;
+        }
+
+        .benefits-content {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+
+        .benefits-text h2 {
+          font-size: 2.2rem;
+          text-align: center;
+        }
+
+        .benefits-text p {
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        .benefits-list {
+          margin-top: 30px;
+        }
+
+        .benefits-list li {
+          font-size: 1rem;
+          margin-bottom: 15px;
+        }
+
+        .benefits-stats {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .stat-card {
+          padding: 30px 20px;
+        }
+
+        .stat-number {
+          font-size: 2.8rem;
+        }
+
+        .stat-card span:last-child {
+          font-size: 1.1rem;
+        }
+
+        .target {
+          padding: 80px 0;
+        }
+
+        .target h2 {
+          font-size: 2.2rem;
+        }
+
+        .target p {
+          font-size: 1rem;
+        }
+
+        .target-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-top: 50px;
+        }
+
+        .target-item {
+          padding: 30px 25px;
+        }
+
+        .target-item h3 {
+          font-size: 1.3rem;
+        }
+
+        .final-cta {
+          padding: 80px 0;
+        }
+
+        .final-cta h2 {
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+
+        .final-cta p {
+          font-size: 1.1rem;
+          padding: 0 10px;
+        }
+
+        .btn-secondary {
+          padding: 16px 32px;
+          font-size: 1rem;
+        }
+
+        footer {
+          padding: 40px 0;
+        }
+
+        footer p {
+          font-size: 0.9rem;
+          padding: 0 10px;
+        }
+      }
+    </style>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PAX ERP",
+        "description": "Modern ERP CRM system built specifically for small manufacturing companies. Cloud-based solution with shop floor tools, inventory management, and integrated CRM.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Waitlist signup - launching soon"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "PAX ERP",
+          "url": "https://paxerp.com"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Small Manufacturing Companies"
+        },
+        "featureList": [
+          "Shop Floor Management Tools",
+          "Built-in CRM System",
+          "Shipping Integration",
+          "E-commerce Integration",
+          "Manufacturing Analytics",
+          "Smart Planning and MRP"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">PAX ERP</div>
+          <a href="contact.html" class="cta-header">Join the Waitlist</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-beams">
+        <div class="beam"></div>
+        <div class="beam"></div>
+        <div class="beam"></div>
+      </div>
+      <div class="data-nodes">
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+      </div>
+      <div class="container">
+        <h1>The ERP System Manufacturers Actually Want</h1>
+        <p>
+          Built by manufacturers, for manufacturers. PAX ERP delivers
+          enterprise-grade functionality at a fraction of the cost—because your
+          business deserves better than outdated, overpriced software.
+        </p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn-primary">Join the Waitlist</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Complete ERP Solution for Manufacturing</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Shop Floor Management Dashboard"
+              >
+                <rect
+                  x="2"
+                  y="6"
+                  width="20"
+                  height="12"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <rect x="6" y="10" width="3" height="4" fill="currentColor" />
+                <rect x="10.5" y="8" width="3" height="6" fill="currentColor" />
+                <rect x="15" y="11" width="3" height="3" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>Shop Floor Tools</h3>
+            <p>
+              Touchscreen-friendly dashboards designed for operators. Simple,
+              intuitive interfaces that actually get used on the production
+              floor.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Built-in CRM System"
+              >
+                <circle
+                  cx="12"
+                  cy="8"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M6 21V19C6 16.79 7.79 15 10 15H14C16.21 15 18 16.79 18 19V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <rect
+                  x="16"
+                  y="4"
+                  width="6"
+                  height="4"
+                  rx="1"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <h3>Built-in CRM</h3>
+            <p>
+              Manage customers, quotes, and sales pipeline without switching
+              between systems. Your manufacturing data flows seamlessly into
+              customer management.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Shipping Integration"
+              >
+                <path
+                  d="M3 7L9 4L15 7L21 4V17L15 20L9 17L3 20V7Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <polyline
+                  points="9,4 9,17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <polyline
+                  points="15,7 15,20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3>Shipping Integration</h3>
+            <p>
+              Generate FedEx and UPS labels instantly. No more manual data entry
+              or separate shipping software to manage.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Shopify E-commerce Integration"
+              >
+                <circle cx="9" cy="21" r="1" fill="currentColor" />
+                <circle cx="20" cy="21" r="1" fill="currentColor" />
+                <path
+                  d="M1 1H5L7.68 14.39C7.77 14.8 8.13 15 8.55 15H19.4C19.82 15 20.18 14.8 20.27 14.39L23 7H6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <rect
+                  x="12"
+                  y="2"
+                  width="8"
+                  height="6"
+                  rx="1"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h3>Shopify Integration</h3>
+            <p>
+              Sync inventory, process orders, and manage e-commerce
+              automatically. Your online store stays updated in real-time.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Manufacturing Analytics and Reporting"
+              >
+                <path
+                  d="M3 3V21H21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M7 12L10.5 8.5L13.5 11.5L20 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <circle cx="7" cy="12" r="1.5" fill="currentColor" />
+                <circle cx="10.5" cy="8.5" r="1.5" fill="currentColor" />
+                <circle cx="13.5" cy="11.5" r="1.5" fill="currentColor" />
+                <circle cx="20" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>Advanced Analytics</h3>
+            <p>
+              Visualize shop floor performance, sales trends, and inventory
+              data. Make decisions based on real insights, not gut feelings.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Smart Manufacturing Planning and MRP"
+              >
+                <rect
+                  x="3"
+                  y="4"
+                  width="18"
+                  height="16"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <rect x="7" y="8" width="10" height="2" fill="currentColor" />
+                <rect x="7" y="12" width="6" height="2" fill="currentColor" />
+                <rect x="7" y="16" width="8" height="2" fill="currentColor" />
+                <circle
+                  cx="17"
+                  cy="13"
+                  r="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h3>Smart Planning</h3>
+            <p>
+              Automated reorder points, material planning, and MRP. Keep
+              production moving without overstocking or running out.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="benefits-content">
+          <div class="benefits-text">
+            <h2>Why Small Manufacturers Choose PAX ERP</h2>
+            <p>
+              We were tired of paying thousands per month for ERP systems that
+              looked like they were built in the early 2000s. Slow, clunky, and
+              expensive—but it was all that was available.
+            </p>
+            <p>
+              So we built what we wished existed: a modern, fast, powerful ERP
+              system designed specifically for growing manufacturers.
+            </p>
+            <ul class="benefits-list">
+              <li>No investors to please—only customers to serve</li>
+              <li>Built and tested by actual manufacturers</li>
+              <li>Modern interface that people actually want to use</li>
+              <li>Complete audit trails and compliance features</li>
+              <li>
+                Lot tracking, expiration management, and inventory control
+              </li>
+              <li>Job costing and accurate quoting tools</li>
+            </ul>
+          </div>
+          <div class="benefits-stats">
+            <div class="stat-card">
+              <span class="stat-number">90%</span>
+              Less Cost
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10x</span>
+              Faster Setup
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              Cloud-Based
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24/7</span>
+              Support
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="target">
+      <div class="container">
+        <div class="target-content">
+          <h2>ERP Software Perfect For Small Manufacturing Companies</h2>
+          <p>
+            Whether you're outgrowing Excel or frustrated with your current ERP,
+            PAX is designed to scale with your business without breaking your
+            budget.
+          </p>
+
+          <div class="target-grid">
+            <div class="target-item">
+              <h3>Manufacturing Startups</h3>
+              <p>
+                Start with enterprise-grade tools from day one. No need to
+                outgrow and migrate later.
+              </p>
+            </div>
+            <div class="target-item">
+              <h3>Excel Graduates</h3>
+              <p>
+                Ready to move beyond spreadsheets? PAX makes the transition
+                smooth and worthwhile.
+              </p>
+            </div>
+            <div class="target-item">
+              <h3>ERP Refugees</h3>
+              <p>
+                Switching from legacy systems? We'll make data migration as
+                painless as possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="final-cta">
+      <div class="container">
+        <h2>Ready to Transform Your Manufacturing Business?</h2>
+        <p>
+          PAX ERP is launching soon. Join our waitlist to get early access and
+          special launch pricing.
+        </p>
+        <a href="contact.html" class="btn-secondary"
+          >Join the Waitlist</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 PAX ERP. Built by manufacturers, for manufacturers.</p>
+      </div>
+    </footer>
+  </body>
+</html>
